@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Document- day 4 javascripte</title>
-
+    <style>
+         .chart-container{
+            width: 30%;
+        }
+    </style>
 </head>
 <body>
     <div id="item_type">
@@ -16,13 +20,21 @@
             <option value="" >votre choix</option>
             <option value="tous">tout les ventes</option>
             <option value="region">"Région"</option>
+            <option value="histo">Histogramme</option>
         </select>
     </div>
 
     <div id="item_list">
     </div> 
     <div id="paragraphe"></div>
+    <!-- Histogramme -->
+    <div class="chart-container">
+        <canvas id="pieCanvas" aria-label="chart" role="img"></canvas>
+     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 
     <script src="./index.js"></script>
+
 </body>
 </html>
