@@ -53,23 +53,23 @@ fetch("./sales_100.json")
        
       }else if(valeur === "histo"){
         
-          const pieCanvas = document.getElementById("pieCanvas");
+        //Model Bar
+        const barCanvas = document.getElementById("barCanvas");
 
-          const barChart = new Chart(pieCanvas,{
-          type : "pie" ,
-          data: {
-              labels : ["Sub-Saharan", "Australia and Oceania", "Middle East and North Africa", "Europe", "Asia", "North America" , "Central America and the Caribbean"],
-              datasets: [{
-                  data: [182870, 68325, 48678, 98117, 59967, 19143, 35771],
-                  backgroundColor: [
-                      "crimson","lightgreen", "lightblue", "violet", "yellow" ,"#56d798",
-                      "#ff8397",
-                  ]
-              }]
-          }
-
-          
-      });
+        const barChart = new Chart(barCanvas,{
+            type : "bar" ,
+            data: {
+                labels : ["Sub-Saharan", "Australia and Oceania", "Middle East and North Africa", "Europe", "Asia", "North America" , "Central America and the Caribbean"],
+                datasets: [{
+                    data: [182870, 68325, 48678, 98117, 59967, 19143, 35771],
+                    backgroundColor: [
+                        "crimson","lightgreen", "lightblue", "violet", "yellow" ,"#56d798",
+                        "#ff8397",
+                    ]
+                }]
+            },
+       
+        })
         boite.innerHTML = barChart;
       
 
